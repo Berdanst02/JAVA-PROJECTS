@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="DJNativeSwing Build Script" default="createJavadoc" basedir="..">
+
+  <target name="createJavadoc" description="Create the javadoc">
+    <delete dir="documentation/javadoc"/>
+    <javadoc destdir="documentation/javadoc" windowtitle="DJ Native Swing">
+      <classpath path="lib/jna/jna-5.2.0.jar"/>
+      <classpath path="lib/jna/jna-platform-5.2.0.jar"/>
+      <packageset dir="src">
+        <include name="chrriis/**"/>
+      </packageset>
+      <link offline="true" href="http://java.sun.com/javase/6/docs/api/" packagelistloc="documentation/javadoc-package-lists/jdk"/>
+    </javadoc>
+  </target>
+
+</project>
